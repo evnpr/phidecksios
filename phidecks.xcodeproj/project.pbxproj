@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AEC8F6E157A594A0086239D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F6D157A594A0086239D /* UIKit.framework */; };
+		9AEC8F70157A594A0086239D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F6F157A594A0086239D /* Foundation.framework */; };
+		9AEC8F72157A594A0086239D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F71157A594A0086239D /* CoreGraphics.framework */; };
+		9AEC8F78157A594A0086239D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC8F76157A594A0086239D /* InfoPlist.strings */; };
+		9AEC8F7A157A594A0086239D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC8F79157A594A0086239D /* main.m */; };
+		9AEC8F7E157A594A0086239D /* phidecksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC8F7D157A594A0086239D /* phidecksAppDelegate.m */; };
+		9AEC8F81157A594A0086239D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC8F7F157A594A0086239D /* MainWindow.xib */; };
+		9AEC8F84157A594A0086239D /* phidecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC8F83157A594A0086239D /* phidecksViewController.m */; };
+		9AEC8F87157A594A0086239D /* phidecksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC8F85157A594A0086239D /* phidecksViewController.xib */; };
+		9AEC8F8F157A594A0086239D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F8E157A594A0086239D /* SenTestingKit.framework */; };
+		9AEC8F90157A594A0086239D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F6D157A594A0086239D /* UIKit.framework */; };
+		9AEC8F91157A594A0086239D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F6F157A594A0086239D /* Foundation.framework */; };
+		9AEC8F92157A594A0086239D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEC8F71157A594A0086239D /* CoreGraphics.framework */; };
+		9AEC8F9A157A594A0086239D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC8F98157A594A0086239D /* InfoPlist.strings */; };
+		9AEC8F9C157A594A0086239D /* phidecksTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 9AEC8F9B157A594A0086239D /* phidecksTests.h */; };
+		9AEC8F9E157A594A0086239D /* phidecksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC8F9D157A594A0086239D /* phidecksTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AEC8F93157A594A0086239D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEC8F60157A594A0086239D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEC8F68157A594A0086239D;
+			remoteInfo = phidecks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9AEC8F69157A594A0086239D /* phidecks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phidecks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEC8F6D157A594A0086239D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9AEC8F6F157A594A0086239D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9AEC8F71157A594A0086239D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9AEC8F75157A594A0086239D /* phidecks-Info.plist */ = {isa = PBXFileReference; path = "phidecks-Info.plist"; sourceTree = "<group>"; };
+		9AEC8F77157A594A0086239D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AEC8F79157A594A0086239D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AEC8F7B157A594A0086239D /* phidecks-Prefix.pch */ = {isa = PBXFileReference; path = "phidecks-Prefix.pch"; sourceTree = "<group>"; };
+		9AEC8F7C157A594A0086239D /* phidecksAppDelegate.h */ = {isa = PBXFileReference; path = phidecksAppDelegate.h; sourceTree = "<group>"; };
+		9AEC8F7D157A594A0086239D /* phidecksAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = phidecksAppDelegate.m; sourceTree = "<group>"; };
+		9AEC8F80157A594A0086239D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		9AEC8F82157A594A0086239D /* phidecksViewController.h */ = {isa = PBXFileReference; path = phidecksViewController.h; sourceTree = "<group>"; };
+		9AEC8F83157A594A0086239D /* phidecksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = phidecksViewController.m; sourceTree = "<group>"; };
+		9AEC8F86157A594A0086239D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/phidecksViewController.xib; sourceTree = "<group>"; };
+		9AEC8F8D157A594A0086239D /* phidecksTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = phidecksTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEC8F8E157A594A0086239D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9AEC8F97157A594A0086239D /* phidecksTests-Info.plist */ = {isa = PBXFileReference; path = "phidecksTests-Info.plist"; sourceTree = "<group>"; };
+		9AEC8F99157A594A0086239D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9AEC8F9B157A594A0086239D /* phidecksTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = phidecksTests.h; sourceTree = "<group>"; };
+		9AEC8F9D157A594A0086239D /* phidecksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = phidecksTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AEC8F66157A594A0086239D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC8F6E157A594A0086239D /* UIKit.framework in Frameworks */,
+				9AEC8F70157A594A0086239D /* Foundation.framework in Frameworks */,
+				9AEC8F72157A594A0086239D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AEC8F89157A594A0086239D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC8F8F157A594A0086239D /* SenTestingKit.framework in Frameworks */,
+				9AEC8F90157A594A0086239D /* UIKit.framework in Frameworks */,
+				9AEC8F91157A594A0086239D /* Foundation.framework in Frameworks */,
+				9AEC8F92157A594A0086239D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AEC8F5E157A594A0086239D = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F73157A594A0086239D /* phidecks */,
+				9AEC8F95157A594A0086239D /* phidecksTests */,
+				9AEC8F6C157A594A0086239D /* Frameworks */,
+				9AEC8F6A157A594A0086239D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AEC8F6A157A594A0086239D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F69157A594A0086239D /* phidecks.app */,
+				9AEC8F8D157A594A0086239D /* phidecksTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AEC8F6C157A594A0086239D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F6D157A594A0086239D /* UIKit.framework */,
+				9AEC8F6F157A594A0086239D /* Foundation.framework */,
+				9AEC8F71157A594A0086239D /* CoreGraphics.framework */,
+				9AEC8F8E157A594A0086239D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AEC8F73157A594A0086239D /* phidecks */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F7C157A594A0086239D /* phidecksAppDelegate.h */,
+				9AEC8F7D157A594A0086239D /* phidecksAppDelegate.m */,
+				9AEC8F7F157A594A0086239D /* MainWindow.xib */,
+				9AEC8F82157A594A0086239D /* phidecksViewController.h */,
+				9AEC8F83157A594A0086239D /* phidecksViewController.m */,
+				9AEC8F85157A594A0086239D /* phidecksViewController.xib */,
+				9AEC8F74157A594A0086239D /* Supporting Files */,
+			);
+			path = phidecks;
+			sourceTree = "<group>";
+		};
+		9AEC8F74157A594A0086239D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F75157A594A0086239D /* phidecks-Info.plist */,
+				9AEC8F76157A594A0086239D /* InfoPlist.strings */,
+				9AEC8F79157A594A0086239D /* main.m */,
+				9AEC8F7B157A594A0086239D /* phidecks-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AEC8F95157A594A0086239D /* phidecksTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F9B157A594A0086239D /* phidecksTests.h */,
+				9AEC8F9D157A594A0086239D /* phidecksTests.m */,
+				9AEC8F96157A594A0086239D /* Supporting Files */,
+			);
+			path = phidecksTests;
+			sourceTree = "<group>";
+		};
+		9AEC8F96157A594A0086239D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC8F97157A594A0086239D /* phidecksTests-Info.plist */,
+				9AEC8F98157A594A0086239D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9AEC8F68157A594A0086239D /* phidecks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AEC8FA1157A594A0086239D /* Build configuration list for PBXNativeTarget "phidecks" */;
+			buildPhases = (
+				9AEC8F65157A594A0086239D /* Sources */,
+				9AEC8F66157A594A0086239D /* Frameworks */,
+				9AEC8F67157A594A0086239D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = phidecks;
+			productName = phidecks;
+			productReference = 9AEC8F69157A594A0086239D /* phidecks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9AEC8F8C157A594A0086239D /* phidecksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AEC8FA4157A594A0086239D /* Build configuration list for PBXNativeTarget "phidecksTests" */;
+			buildPhases = (
+				9AEC8F88157A594A0086239D /* Sources */,
+				9AEC8F89157A594A0086239D /* Frameworks */,
+				9AEC8F8A157A594A0086239D /* Resources */,
+				9AEC8F8B157A594A0086239D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AEC8F94157A594A0086239D /* PBXTargetDependency */,
+			);
+			name = phidecksTests;
+			productName = phidecksTests;
+			productReference = 9AEC8F8D157A594A0086239D /* phidecksTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9AEC8F60157A594A0086239D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = XMinds;
+			};
+			buildConfigurationList = 9AEC8F63157A594A0086239D /* Build configuration list for PBXProject "phidecks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9AEC8F5E157A594A0086239D;
+			productRefGroup = 9AEC8F6A157A594A0086239D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9AEC8F68157A594A0086239D /* phidecks */,
+				9AEC8F8C157A594A0086239D /* phidecksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9AEC8F67157A594A0086239D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC8F78157A594A0086239D /* InfoPlist.strings in Resources */,
+				9AEC8F81157A594A0086239D /* MainWindow.xib in Resources */,
+				9AEC8F87157A594A0086239D /* phidecksViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AEC8F8A157A594A0086239D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC8F9A157A594A0086239D /* InfoPlist.strings in Resources */,
+				9AEC8F9C157A594A0086239D /* phidecksTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9AEC8F8B157A594A0086239D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9AEC8F65157A594A0086239D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC8F7A157A594A0086239D /* main.m in Sources */,
+				9AEC8F7E157A594A0086239D /* phidecksAppDelegate.m in Sources */,
+				9AEC8F84157A594A0086239D /* phidecksViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AEC8F88157A594A0086239D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AEC8F9E157A594A0086239D /* phidecksTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AEC8F94157A594A0086239D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AEC8F68157A594A0086239D /* phidecks */;
+			targetProxy = 9AEC8F93157A594A0086239D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9AEC8F76157A594A0086239D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AEC8F77157A594A0086239D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9AEC8F7F157A594A0086239D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AEC8F80157A594A0086239D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		9AEC8F85157A594A0086239D /* phidecksViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AEC8F86157A594A0086239D /* en */,
+			);
+			name = phidecksViewController.xib;
+			sourceTree = "<group>";
+		};
+		9AEC8F98157A594A0086239D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AEC8F99157A594A0086239D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9AEC8F9F157A594A0086239D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9AEC8FA0157A594A0086239D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AEC8FA2157A594A0086239D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "phidecks/phidecks-Prefix.pch";
+				INFOPLIST_FILE = "phidecks/phidecks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9AEC8FA3157A594A0086239D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "phidecks/phidecks-Prefix.pch";
+				INFOPLIST_FILE = "phidecks/phidecks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9AEC8FA5157A594A0086239D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/phidecks.app/phidecks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "phidecks/phidecks-Prefix.pch";
+				INFOPLIST_FILE = "phidecksTests/phidecksTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9AEC8FA6157A594A0086239D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/phidecks.app/phidecks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "phidecks/phidecks-Prefix.pch";
+				INFOPLIST_FILE = "phidecksTests/phidecksTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9AEC8F63157A594A0086239D /* Build configuration list for PBXProject "phidecks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AEC8F9F157A594A0086239D /* Debug */,
+				9AEC8FA0157A594A0086239D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AEC8FA1157A594A0086239D /* Build configuration list for PBXNativeTarget "phidecks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AEC8FA2157A594A0086239D /* Debug */,
+				9AEC8FA3157A594A0086239D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AEC8FA4157A594A0086239D /* Build configuration list for PBXNativeTarget "phidecksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AEC8FA5157A594A0086239D /* Debug */,
+				9AEC8FA6157A594A0086239D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9AEC8F60157A594A0086239D /* Project object */;
+}
