@@ -2,24 +2,68 @@
 //  phidecksAppDelegate.m
 //  phidecks
 //
-//  Created by Jugs VN on 02/06/12.
+//  Created by Aneesh on 02/06/12.
 //  Copyright 2012 XMinds. All rights reserved.
 //
 
-#import "phidecksAppDelegate.h"
+#import "PhidecksAppDelegate.h"
 
-#import "phidecksViewController.h"
-
-@implementation phidecksAppDelegate
+@implementation PhidecksAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize appData;
+@synthesize HUD;
+@synthesize transitionController;
+@synthesize carouselDeckViewController;
+@synthesize dbWrapper;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
+    
+    carouselDeckViewController = nil;
+    dbWrapper = [[DatabaseWrapper alloc] init];
+    [dbWrapper createEditableCopyOfDatabaseIfNeeded];
+    [dbWrapper initializeDatabase];
+    
+    if( [dbWrapper loadActiveUser] == NO ){
+        NSLog(@"Failed - No Users");
+    }
+    
+    appData = [[PhidecksAppData alloc] init];
+    [appData setUsernameAndPassword:dbWrapper.activeUser.username password:dbWrapper.activeUser.password];
+    
+    [self showLoadingHUD];
+    [dbWrapper loadDecksFromDatabaseForUser:dbWrapper.activeUser.user_id];
+    if( [appData.my_decks count] <= 0 ){
+        [appData authenticateAndLoadData];
+    }
+
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(deckLoaded:) 
+                                                 name:@"NSPhiDeckLoaded" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(showToolbar:) 
+                                                 name:@"NSShowToolbar" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(hideToolbar:) 
+                                                 name:@"NSHideToolbar" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(showHomeScreen:) 
+                                                 name:@"NSShowHomeScreen" object:nil];
+
+    transitionController = [[TransitionController alloc] initWithViewController:self.viewController];
+    toolbarView = [[ToolbarView alloc]initWithFrame:CGRectMake(0 - 120, 100, 100, 400)];
+    
+    self.window.rootViewController = self.transitionController;
+    if( [appData.my_decks count] > 0 ){
+        [_viewController.homePageViewController paintDeckThumbnails];
+        [HUD hide:YES];
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -63,8 +107,80 @@
      */
 }
 
+
+- (void) deckLoaded:(id) sender{
+    
+    HUD.progress = 1.0f;
+    [HUD hide:YES];
+    
+    [self.transitionController setAutoResizing];    
+    
+/*    if( carouselDeckViewController != nil ){
+        [carouselDeckViewController release];
+        carouselDeckViewController = nil;
+    }
+ */
+    
+    carouselDeckViewController = [[CarouselDeckViewController alloc] initWithDeckId:appData.selected_deck_id];
+    carouselDeckViewController.view.frame = CGRectMake(0,0,1024, 768);
+    [transitionController transitionToViewControllerWithBackgroundAndPoint:carouselDeckViewController withImage:appData.previewHomePage startRect:appData.selectedDeckRect];
+}
+
+- (void)showToolbar:(id) sender{
+    
+    [carouselDeckViewController.view addSubview:toolbarView]; 
+    [UIView animateWithDuration:0.4 animations:^{
+        toolbarView.frame = CGRectMake(-2,100,100,400);
+    }];
+}
+
+- (void)hideToolbar:(id) sender{
+    
+    [UIView animateWithDuration:0.4 
+                     animations:^{
+                         toolbarView.frame = CGRectMake(0 - 120,100, 100, 400);
+                     }
+                     completion:^(BOOL finished){
+                         [toolbarView removeFromSuperview];
+                     }
+     ];
+    
+}
+
+- (void) showHomeScreen:(id) sender{
+    
+    [transitionController transitionToViewController:_viewController withOptions:UIViewAnimationOptionTransitionCrossDissolve];
+    
+}
+- (void) showLoadingHUD {
+	
+	if( HUD == nil)
+		HUD = [[MBProgressHUD alloc] initWithView:self.viewController.view];
+	HUD.labelFont = [UIFont fontWithName:@"Arial" size:14];
+	[self.viewController.view addSubview:HUD];
+	HUD.mode = MBProgressHUDModeDeterminate;
+	HUD.labelText = @"Initializing...";
+	HUD.progress = 0.0f;
+    [HUD show:YES];
+}
+
+- (void) hideLoadingHUD {
+	
+	[HUD hide:YES];
+	
+}
+
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [appData release];
+    [HUD release];
+    [transitionController release];
+    if( carouselDeckViewController != nil )
+        [carouselDeckViewController release];
+    [toolbarView release];
+    [dbWrapper release];
+    
     [_window release];
     [_viewController release];
     [super dealloc];
